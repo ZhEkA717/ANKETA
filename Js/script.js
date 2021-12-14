@@ -9,7 +9,7 @@ while (lname == "" || lname == null || lname.length>15) {
     lname = prompt('Ваша Фамилия?', "Грушевский");
 }
 while (sname == "" || sname == null || sname.length>15) {
-    sname = prompt('Ваше Отчество ?', "Сергеевич")
+    sname = prompt('Ваше Отчество ?', "Сергеевич");
 }
 while (age == "" || isNaN(age) || age == null ||
     +age < 1 || +age > 135) {
@@ -31,7 +31,7 @@ gender = gender ? "Мужской" : "Женский";
 if (fname != "" && lname != "" && sname != "" &&
     fname.length<15 && lname.length<15 && sname.length<15 &&
     fname != null && lname != null && sname != null &&
-    age != "" && +age != NaN) {
+    age != "" && +age>0 && +age<135) {
     alert(`
         Ваше ФИО: ${lname} ${fname} ${sname} 
         Ваш возраст в годах: ${age}
@@ -39,6 +39,6 @@ if (fname != "" && lname != "" && sname != "" &&
         Через 5 лет вам будет: ${+age + 5} 
         Ваш пол: ${gender} 
         Вы на пенсии: ${pencia}`
-    )
+    );
 }
 
